@@ -56,12 +56,19 @@ namespace accidenteFindSpotsOnMap
 				
 			}
 		}
+		public class accident
+		{
+			public pairsInt xycoordsofaccident;
+			public DateTime data;
+			public string alteInfo; //romanengleza mea e perfecta :)
+		}
 		public class pair
 		{
 			public int streetAindex;
 			public int streetBindex;
 			public int nrOfAccidents = 0;
-			public List<string>dateaccidente = new List<string>();
+		
+			public List<accident>dateaccidente = new List<accident>();
 			public string name;
 			public pair(){}
 			public pair(int px, int py, string pname)
@@ -78,7 +85,7 @@ namespace accidenteFindSpotsOnMap
 				mapxy.Add(new pair(x,y,name));
 				return true;
 			}
-			public bool addNewAccident(int intersectioncode, string x)
+			public bool addNewAccident(int intersectioncode, accident x)
 			{
 				mapxy[intersectioncode].dateaccidente.Add(x);
 				return true;
