@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: razvan
  * Date: 6/3/2024
@@ -87,7 +87,8 @@ namespace accidenteFindSpotsOnMap
 			{
 				for(int i = 0; i < mapxy.Count ; i++)
 				{
-					g.DrawLine(new Pen(Color.Black),sx[mapxy[i].streetAindex].path[0].x,sx[mapxy[i].streetBindex].path[0].x,sx[mapxy[i].streetAindex].path[0].y,sx[mapxy[i].streetBindex].path[0].y);
+					//here you can test how many line exists in path or dots
+					g.DrawLine(new Pen(Color.Black),sx[mapxy[i].streetAindex].path[0].x,sx[mapxy[i].streetBindex].path[0].x,sx[mapxy[i].streetAindex].path[1].y,sx[mapxy[i].streetBindex].path[1].y);
 					          
 				}
 				return true;
